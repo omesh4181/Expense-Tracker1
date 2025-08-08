@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Expense.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div class="login-page" id="loginPage">
+        <div class="solid-circle"></div>
+        <div class="header-home">
+            <h5 class="m-0">Expense Tracker <i class="fa-solid fa-suitcase"></i></h5>
+            <button class="btn btn-md" id="clickHereButton">Click Here</button>
+        </div>
+        <div class="main-content">
+            <h3 class="main-content-text">Hello<i class="fa-solid fa-handshake"></i>, please enter your
+                <br>
+                <span id="name">Name</span>
+            </h3>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="nameInput" placeholder="">
+                <label for="nameInput">Name Here</label>
+            </div>
+            <button class="btn" id="loginButton">Login</button>
+        </div>
+    </div>
+
+    <!-- Tracker Page -->
+    <div class="tracker-page" id="trackerPage">
+        <div class="header">
+            <p class="m-0" id="welcomeMessage">Expense<br>Tracker<i class="fa-solid fa-suitcase"></i></p>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+
+        <div class="input-form">
+            <div class="form-floating inputs">
+                <input type="number" class="form-control" id="amountInput" placeholder="" step="0.01">
+                <label for="amountInput">Amount</label>
+            </div>
+            <select class="form-select inputs" id="transactionType" aria-label="Transaction Type">
+                <option selected>Transaction Type</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <div class="form-floating inputs">
+                <input type="date" class="form-control" id="dateInput" placeholder="">
+                <label for="dateInput">Date</label>
+            </div>
+            <button id="add-button">+</button>
+        </div>
+
+        <div class="cards mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title m-0">Total Income
+                        <i class="fa-solid fa-suitcase"></i>
+                    </h5>
+                    <h1 class="m-0">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        <span id="totalIncome">0</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title m-0">Total Expense
+                        <i class="fa-solid fa-wallet"></i>
+                    </h5>
+                    <h1 class="m-0">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        <span id="totalExpense">0</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title m-0">Balance
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </h5>
+                    <h1 class="m-0">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        <span id="balance">0</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="export-clear-buttons">
+            <button class="export-btn" id="exportBtn">
+                <i class="fa-solid fa-download"></i> Export CSV
+            </button>
+            <button class="clear-btn" id="clearBtn">
+                <i class="fa-solid fa-trash"></i> Clear All
+            </button>
+        </div>
+
+        <table class="transaction-table" id="transactionTable">
+            <tr id="header-row">
+                <th>Amount</th>
+                <th>Transaction Type</th>
+                <th>Transaction Date</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src="./Expense.js"></script>
+</body>
+</html>

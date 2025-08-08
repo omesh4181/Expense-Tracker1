@@ -1,0 +1,261 @@
+body {
+            font-family: "Comfortaa", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Login Page Styles */
+        .login-page {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .solid-circle {
+            height: 750px;
+            width: 750px;
+            background: #476ef7;
+            border-radius: 50%;
+            position: absolute;
+            right: -375px;
+            top: -120px;
+            z-index: 1;
+        }
+
+        .header-home {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            top: 10px;
+            padding: 0px 25px;
+        }
+
+        #clickHereButton {
+            background: white;
+            color: #476ef7;
+            font-size: larger;
+            font-weight: 600;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.50);
+        }
+
+        #name {
+            color: #476ef7;
+            font-size: 100px;
+        }
+
+        .form-floating {
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+        }
+
+        #login-button {
+            background: #476ef7;
+            color: white;
+            padding: 5px 25px;
+            font-weight: 600;
+        }
+
+        .main-content {
+            margin-left: 25px;
+            z-index: 2;
+        }
+
+        /* Tracker Page Styles */
+        .tracker-page {
+            display: none;
+        }
+
+        .header {
+            background: #476ef7;
+            color: white;
+            padding: 20px 25px;
+            font-size: x-large;
+            position: relative;
+        }
+
+        .input-form {
+            display: flex;
+            justify-content: space-around;
+            width: 70%;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0px 0px 4px #476ef7;
+            padding: 26px 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        #add-button {
+            background: #476ef7;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: x-large;
+            font-weight: 600;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #add-button:hover {
+            background: #3558d9;
+            transform: scale(1.05);
+        }
+
+        .inputs {
+            min-width: 200px;
+            flex: 1;
+        }
+
+        .cards {
+            display: flex;
+            width: 70%;
+            margin: 30px auto;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #476ef7;
+            border: 0px;
+            height: 150px;
+            flex: 1;
+            min-width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-body {
+            color: white;
+        }
+
+        .transaction-table {
+            width: 70%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        #header-row {
+            background: #476ef7;
+        }
+
+        #header-row th {
+            padding: 15px 10px;
+            color: white;
+            text-align: left;
+        }
+
+        .transaction-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .transaction-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .delete-button {
+            color: #dc3545;
+            border: none;
+            background: #f8f9fa;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .delete-button:hover {
+            background: #dc3545;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .logout-btn {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: #476ef7;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .logout-btn:hover {
+            background: #f8f9fa;
+        }
+
+        .export-clear-buttons {
+            width: 70%;
+            margin: 20px auto;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .export-btn, .clear-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .export-btn {
+            background: #28a745;
+            color: white;
+        }
+
+        .export-btn:hover {
+            background: #218838;
+        }
+
+        .clear-btn {
+            background: #dc3545;
+            color: white;
+        }
+
+        .clear-btn:hover {
+            background: #c82333;
+        }
+
+        @media (max-width: 768px) {
+            .input-form, .cards, .transaction-table, .export-clear-buttons {
+                width: 95%;
+            }
+            
+            .cards {
+                flex-direction: column;
+            }
+            
+            .input-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .inputs {
+                width: 100%;
+            }
+            
+            #name {
+                font-size: 60px;
+            }
+        }
